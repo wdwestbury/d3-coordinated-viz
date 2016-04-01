@@ -1,0 +1,7 @@
+/*custom css for coordinated d3-vz*/
+.map 
+{
+	border: medium solid black;
+	border-radius: 2px;
+	background-color: #bee0f2;
+}
