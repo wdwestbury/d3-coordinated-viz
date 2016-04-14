@@ -1,10 +1,83 @@
 /*custom css for coordinated d3-vz*/
+body 
+{
+    background-color: #222;
+}
+
+/* Global Styles */
+
+
+@media(min-width:768px) {
+    body {
+
+    }
+}
+
+#title
+{
+    position: absolute;
+    text-align: center;
+    font-size: 150%;
+}
+
+#industryName
+{
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#panel 
+{
+    width: 30%;
+    height: 200px;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #222222;
+}
+
+
+#info
+{
+    display: inline-block;
+}
+
+#cc 
+{
+    float: left;
+}
+
+#hr1
+{
+    width: 78%;
+}
+
+.infolabel 
+{
+    position: absolute;
+    height: 50px;
+    min-width: 100px;
+    color: #9D9D9D;
+    background-color: #222222;
+    border: solid thin #9D9D9D;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.infolabel h5 
+{
+    margin: 0 20px 0 0;
+    padding: 0;
+    display: inline-block;
+    line-height: 1em;
+}
+
 .map 
 {
-	border: medium solid black;
-	border-radius: 2px;
-	background-color: grey;
-	margin: 10px 0 0 20px;
+    border-radius: 2px;
+    background-color: #222222;
 }
 
 .counties 
@@ -16,11 +89,8 @@
 
 .chart 
 {
-    background-color: grey;
-    border: medium solid black;
+    background-color: #222222;
     border-radius: 2px;
-    float: right;
-    margin: 10px 20px 0 0;
 }
 
 .chartTitle 
@@ -33,7 +103,7 @@
 
 .chartBackground 
 {
-    fill: rgba(128,128,128,.2);
+    fill: #222222;
 }
 
 .axis path,
@@ -44,3 +114,195 @@
     stroke-width: 1px;
     shape-rendering: crispEdges;
 }
+
+.axis text
+{
+    fill: #9D9D9D; 
+}
+
+.text
+{
+    color: #9D9D9D; 
+}
+
+.center
+{
+    text-align: center;
+}
+
+.respondo
+{
+    position: relative;
+    text-align: center;
+    line-height: 1.4em;
+}
+.panelText
+{
+    color: #9D9D9D;
+    display: inline-block;
+    text-align: left;
+}
+
+.legend-control-container
+{
+/*    background-color: #CDD2D4;*/
+    border-radius: 5px;
+    border-color: 2px solid red;
+}
+
+
+
+
+@media(min-width:768px) 
+{
+    #wrapper 
+    {
+        padding-left: 225px;
+    }
+
+    #page-wrapper 
+    {
+        padding: 10px;
+    }
+}
+
+.blue
+{
+    color:'#046fb8';
+}
+
+/* Top Navigation */
+.navbar-brand
+{
+    text-align: center;
+}
+.top-nav 
+{
+    padding: 0 15px;
+}
+
+.top-nav>li 
+{
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a 
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus 
+{
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu 
+{
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a 
+{
+    white-space: normal;
+}
+
+ul.message-dropdown 
+{
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview 
+{
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a 
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer 
+{
+    margin: 5px 0;
+}
+
+ul.alert-dropdown 
+{
+    width: 200px;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) 
+{
+    .side-nav 
+    {
+        position: fixed;
+        top: 51px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #222;
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a 
+    {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus 
+    {
+        outline: none;
+        background-color: #000 !important;
+    }
+}
+
+.side-nav>li>ul 
+{
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a 
+{
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover 
+{
+    color: #fff;
+}
+
+
+

@@ -8,24 +8,83 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Wisco Bill's Coordinated d3-viz</title>
+        <title>The State of Education in Wisconsin</title>
 
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
+        <!-- Custom CSS -->
+        <link href="css/custom.css" rel="stylesheet">
 
-        <!-- link to css -->
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+            <!-- jquery link -->
+        <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
 
         <!-- script for d3 and queue -->
         <script type="text/javascript" src="lib/d3.min.js"></script>
         <script type="text/javascript" src="lib/d3-queue.min.js"></script>
         <script type="text/javascript" src="lib/topojson.v1.js"></script>
         <script type="text/javascript" src="lib/simple.min.js"></script>
-
     </head>
 
     <body>
+        <h1 class="text center">The State of Education in Wisconsin</h1>
+        <h4 class="text center">Education Rates by County in Wisconsin</h4>
+        <hr id="hr1">
 
+        <div class="respondo">
+            <!-- pannel container -->
+            <div id='panel'>
+                <div>
+                    <p class="panelText">
+                        Long considered one of best states in the U.S. for public schools, Wisconsin ranks 4th out of all states in high school graduation rates with a state high school graduation rate of 88%. In addition to its high school graduation rates, Wisconsin is also known for high quality post secondary education institutions and is home to a top tier public research institution, The University of Wisconsin Madison. While the education rates in Wisconsin are high, they are not high everywhere and there are often clusters in both the highly educated and uneducated. This map shows the distribution of education levels by county for the state. Select an option from the dropdown below and explore the state of education in Wisconsin.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text">Education Level</h4>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button class="btn dropdown-toggle btn-primary years" type="button" data-toggle="dropdown">Education
+                            <span class="caret"></span>
+                        </button>
+                            <ul id="edStatistic" class="dropdown-menu">
+                                <li>
+                                    <a href="#" id='shs'>Some High School</a>
+                                </li>
+                                <li>
+                                    <a id='hsg'>High School Graduate</a>
+                                </li>
+                                <li>
+                                    <a id='sc'>Some College</a>
+                                </li>
+                                <li>
+                                    <a id="bd">Bachelors Degree</a>
+                                </li>
+                                <li>
+                                    <a id='gdopd'>Graduate or Professional Degree</a>
+                                </li>
+                            </ul>
+                    </div>
+                    <input id="chosenEdStatistic" class="form-control" type="text" placeholder="Choose a statistic"></input>
+                </div>
+            </div>
+
+            <div id="info">
+                <div class="respondo" id="map"></div>
+                           
+            </div>
+            <h4 class="text center" >Percentage of people <span id="educationStatistic"></span></h4>
+            <div class="respondo" id="chart"></div>
+             
+        </div>
     </body>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="lib/bootstrap.min.js"></script>
 
     <!--script for custom js -->
     <script type="text/javascript" src="js/custom.js"></script>
